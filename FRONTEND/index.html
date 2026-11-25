@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Interviewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🤖 AI Voice Interviewer</h1>
+        <p id="welcomeMessage">Welcome to your QA Automation Technical Interview!</p>
+        <h2>Java + Selenium Interview</h2>
+    </header>
+
+    <main class="interview-container">
+        <!-- LEFT PANEL: PORTRAIT IMAGE -->
+        <div class="avatar-panel" id="avatarPanel">
+            <div class="status-badge">
+                <span class="dot"></span> AI Interviewer
+            </div>
+            
+            <!-- Exact path matching your IMAGES folder -->
+            <img src="IMAGES/AI Interviewer Portrait.png" alt="AI Interviewer" class="avatar-image">
+            
+            <!-- Audio Visualizer -->
+            <div class="audio-visualizer" id="visualizer">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: INTERVIEW LOGIC -->
+        <div class="question-panel">
+            <button id="startBtn" class="start-btn">Start Interview</button>
+
+            <div id="questionPanel" hidden>
+                <div class="question-box">
+                    <span class="question-badge" id="questionNumber">Question 1 of 5</span>
+                    <h3 id="questionText"></h3>
+                </div>
+
+                <div class="input-group">
+                    <button id="micBtn" class="mic-btn">🎤 Speak Answer</button>
+                    <textarea id="answerInput" rows="5" placeholder="Your spoken answer will appear here..."></textarea>
+                </div>
+                
+                <button id="submitBtn" class="submit-btn">Submit Answer</button>
+            </div>
+
+            <div id="resultPanel" hidden>
+                <h2>Interview Completed!</h2>
+                <p id="resultMessage"></p>
+                <div id="answerSummary"></div>
+                <div id="evaluationSummary"></div>
+                <button id="restartBtn" class="start-btn" style="margin-top: 20px;">Try Again</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>npm run
